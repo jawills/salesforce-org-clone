@@ -11,9 +11,9 @@ else
 fi
 
 # Create Project
-echo "Enter Project Directory "
+echo "Enter Project Directory: "
 read PROJECT_DIR
-echo "Enter Project Name"
+echo "Enter Project Name: "
 read PROJECT_NAME
 sfdx force:project:create -n $PROJECT_NAME --template standard -d $PROJECT_DIR
 
@@ -23,7 +23,7 @@ echo "package.xml copied successfully"
 
 cd $PROJECT_DIR/$PROJECT_NAME/
 # Set Org alias
-echo "Set alias name"
+echo "Set SFDX alias name:"
 read ALIAS_NAME
 sfdx force:auth:web:login --setalias $ALIAS_NAME
 
